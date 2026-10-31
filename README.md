@@ -24,14 +24,6 @@ Sales landing page for the AvtoDiva video course on traffic rules theory (catego
 1. Clone the repository: `git clone https://github.com/AndreyPolezhaiev/avtodiva-landing.git`
 2. Open `src/` with any static server (e.g. VS Code Live Server).
 
-
-## 🔗 Related Projects
-
-* **Frontend Repository:** [AndreyPolezhaiev/avtodiva-frontend](https://github.com/AndreyPolezhaiev/avtodiva-frontend)
-* **Backend Repository:** [AndreyPolezhaiev/avtodiva-backend](https://github.com/AndreyPolezhaiev/avtodiva-advanced)
-* **Gateway Repository:** [AndreyPolezhaiev/avtodiva-gateway](https://github.com/AndreyPolezhaiev/avtodiva-gateway)
-
-
 ---
 
 Developed and maintained by **Andrii Polezhaiev**.
