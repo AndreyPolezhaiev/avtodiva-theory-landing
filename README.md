@@ -21,7 +21,7 @@ Sales landing page for the AvtoDiva video course on traffic rules theory (catego
 
 
 ## 🚀 How to Run
-1. Clone the repository: `git clone https://github.com/AndreyPolezhaiev/avtodiva-landing.git`
+1. Clone the repository: `git clone https://github.com/AndreyPolezhaiev/avtodiva-theory-landing.git`
 2. Open `src/` with any static server (e.g. VS Code Live Server).
 
 ---
