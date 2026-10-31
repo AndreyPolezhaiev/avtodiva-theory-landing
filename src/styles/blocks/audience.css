@@ -1,0 +1,78 @@
+.audience {
+  position: relative;
+}
+
+/* below the title and beside the first picture, so it never covers text */
+.audience__decor {
+  position: absolute;
+  top: 32px;
+  right: -92px;
+  width: 196px;
+}
+
+/* beside the last picture, above its text */
+.audience__warning {
+  position: absolute;
+  left: -52px;
+  bottom: 118px;
+  width: 144px;
+  height: 130px;
+  transform: rotate(-14deg);
+}
+
+.audience__item {
+  position: relative;
+  max-width: 330px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.audience__item:last-child {
+  margin-bottom: 0;
+}
+
+.audience__image {
+  width: 150px;
+  margin: 0 auto 14px;
+}
+
+.audience__title {
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .audience__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+  }
+
+  .audience__item {
+    margin: 0 auto;
+  }
+
+  .audience__decor {
+    top: -47px;
+    right: var(--gutter);
+    width: 150px;
+  }
+
+  .audience__warning {
+    top: -48px;
+    bottom: auto;
+    left: var(--gutter);
+    width: 144px;
+    height: 130px;
+  }
+}
+
+@media (min-width: 992px) {
+  .audience__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .audience__image {
+    width: 190px;
+  }
+}

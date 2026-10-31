@@ -1,0 +1,85 @@
+@import url("styles/utils/variables.css");
+
+@import url("styles/blocks/container.css");
+@import url("styles/blocks/section.css");
+@import url("styles/blocks/cta.css");
+@import url("styles/blocks/hero.css");
+@import url("styles/blocks/btn.css");
+@import url("styles/blocks/features.css");
+@import url("styles/blocks/audience.css");
+@import url("styles/blocks/problems.css");
+@import url("styles/blocks/lesson.css");
+@import url("styles/blocks/author.css");
+@import url("styles/blocks/results.css");
+@import url("styles/blocks/steps.css");
+@import url("styles/blocks/reviews.css");
+@import url("styles/blocks/faq.css");
+@import url("styles/blocks/footer.css");
+
+@font-face {
+  font-family: "Bebas Neue Cyrillic";
+  src: url("assets/fonts/bebas-neue-cyrillic.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* signs and the tape stick out past the screen edges: never let them widen the page */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: clip;
+  background: var(--color-bg);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+/* signs and the tape stick out past the screen edges. A wrapper with overflow hidden is the only
+   thing phones (incl. older iOS Safari, which ignores it on html/body and has no overflow: clip)
+   respect, otherwise the page gets wider than the screen and the dark background shows at the side */
+.page {
+  overflow-x: hidden;
+}
+
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+}

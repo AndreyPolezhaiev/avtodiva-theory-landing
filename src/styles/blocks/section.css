@@ -1,0 +1,45 @@
+.section {
+  padding: var(--section-padding-y) 0;
+  overflow-x: clip;
+}
+
+.section--light {
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.section--pt-sm {
+  padding-top: 16px;
+}
+
+.section--pt-md {
+  padding-top: 24px;
+}
+
+.section--pb-sm {
+  padding-bottom: 16px;
+}
+
+/* dark section with a convex bottom edge, the next section slides under it */
+.section--curve {
+  position: relative;
+  z-index: 1;
+  padding-bottom: calc(var(--section-padding-y) + var(--curve-height) / 2);
+  background: var(--color-bg);
+  border-radius: 0 0 50% 50% / 0 0 var(--curve-height) var(--curve-height);
+}
+
+.section--curve + .section {
+  margin-top: calc(-1 * var(--curve-height));
+  padding-top: calc(var(--section-padding-y) + var(--curve-height));
+}
+
+.section--divided {
+  border-top: 1px solid var(--color-divider);
+}
+
+.section__title {
+  font-size: var(--section-title-font-size);
+  text-align: center;
+  margin-bottom: var(--section-title-margin-bottom);
+}

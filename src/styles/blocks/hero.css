@@ -1,0 +1,180 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+/* top padding pushes the photo down so the headline sits on the sky, not on the face */
+.hero__inner {
+  position: relative;
+  max-width: var(--column-width);
+  margin: 0 auto;
+  padding-top: 72px;
+}
+
+.hero__content {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--gutter) var(--gutter) 0;
+  text-align: center;
+}
+
+.hero__tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-style: italic;
+  font-size: clamp(12px, 3.6vw, 14px);
+}
+
+.hero__tagline::before {
+  content: "";
+  flex: none;
+  width: 36px;
+  height: 2px;
+  background: var(--color-red);
+}
+
+.hero__bolt {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+.hero__title {
+  position: relative;
+  font-size: var(--hero-title-font-size);
+  margin-top: 12px;
+}
+
+.hero__title-accent {
+  color: var(--color-red);
+}
+
+.hero__subtitle {
+  position: relative;
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: var(--hero-subtitle-font-size);
+  margin-top: 10px;
+  line-height: 1.15;
+}
+
+.hero__description {
+  position: relative;
+  max-width: 360px;
+  margin: 8px auto 0;
+  font-size: 14px;
+  line-height: 1.35;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero__media {
+  position: relative;
+}
+
+.hero__media::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 18%;
+  background: linear-gradient(180deg, var(--color-bg), transparent);
+}
+
+/* fade the photo into the page so the buttons can sit on it */
+.hero__media::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 28%;
+  background: linear-gradient(180deg, transparent, var(--color-bg));
+}
+
+.hero__background {
+  width: 100%;
+}
+
+.hero__cta {
+  position: relative;
+  z-index: 1;
+  margin-top: -160px;
+  padding-top: 0;
+}
+
+@media (min-width: 992px) {
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 460px;
+    grid-template-areas:
+      "content media"
+      "cta media";
+    align-content: center;
+    column-gap: 56px;
+    max-width: var(--container-wide-width);
+    padding: 32px var(--gutter) 0;
+  }
+
+  .hero__content {
+    position: relative;
+    grid-area: content;
+    align-self: end;
+    padding: 0;
+    text-align: left;
+  }
+
+  .hero__tagline {
+    justify-content: flex-start;
+    font-size: 18px;
+  }
+
+  .hero__bolt {
+    display: none;
+  }
+
+  .hero__title {
+    margin-top: 18px;
+  }
+
+  .hero__subtitle {
+    margin-top: 18px;
+  }
+
+  .hero__description {
+    max-width: 540px;
+    margin: 16px 0 0;
+    font-size: 18px;
+  }
+
+  .hero__media {
+    grid-area: media;
+  }
+
+  .hero__media::before {
+    inset: 0;
+    height: auto;
+    z-index: 1;
+    background: linear-gradient(90deg, var(--color-bg), transparent 18%, transparent 82%, var(--color-bg));
+  }
+
+  .hero__cta {
+    grid-area: cta;
+    align-self: start;
+    width: 100%;
+    max-width: 460px;
+    margin: 0;
+    padding: 40px 0 0;
+  }
+}

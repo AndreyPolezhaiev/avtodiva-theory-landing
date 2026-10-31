@@ -1,0 +1,6 @@
+.footer {
+  padding: 16px var(--gutter) 28px;
+  color: var(--color-muted);
+  font-size: 13px;
+  text-align: center;
+}

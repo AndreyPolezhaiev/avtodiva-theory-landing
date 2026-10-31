@@ -1,0 +1,45 @@
+.results__list {
+  display: grid;
+  gap: 14px;
+}
+
+.result {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 16px;
+  border-radius: var(--card-radius);
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+/* the source icons are red circles cut top and bottom: crop them into a full one */
+.result__icon {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--color-red);
+  object-fit: cover;
+}
+
+.result__title {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .results__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .result {
+    padding: 22px 24px;
+    gap: 20px;
+  }
+
+  .result__icon {
+    width: 76px;
+    height: 76px;
+  }
+}

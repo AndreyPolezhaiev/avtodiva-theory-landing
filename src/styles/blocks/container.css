@@ -1,0 +1,15 @@
+.container {
+  max-width: var(--column-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+@media (min-width: 768px) {
+  .container--wide {
+    max-width: var(--container-wide-width);
+  }
+
+  .container--narrow {
+    max-width: var(--container-narrow-width);
+  }
+}

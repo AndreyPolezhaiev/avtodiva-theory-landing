@@ -1,0 +1,69 @@
+.program__list {
+  display: grid;
+  gap: 16px;
+}
+
+.lesson {
+  display: flex;
+  flex-direction: column;
+  padding: 0 18px 18px;
+  border-radius: var(--card-radius);
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.lesson__number {
+  align-self: center;
+  margin-bottom: 18px;
+  padding: 6px 30px;
+  border-radius: 0 0 10px 10px;
+  background: var(--color-red);
+  font-size: 22px;
+}
+
+.lesson__image {
+  width: 100%;
+  border-radius: var(--card-radius);
+  margin-bottom: 20px;
+}
+
+.lesson__title {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.lesson__result {
+  margin-top: 22px;
+  padding: 16px 18px;
+  border-radius: var(--card-radius);
+  background: var(--color-red);
+}
+
+.lesson__result-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .program__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* equal-height cards: results line up at the bottom */
+  .lesson__result {
+    margin-top: auto;
+  }
+
+  .lesson__title + p {
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 992px) {
+  .program__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

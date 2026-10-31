@@ -1,0 +1,53 @@
+/* wider than the screen: the tape's ends are slanted and must bleed off both edges */
+.features__tape {
+  width: 136%;
+  max-width: none;
+  margin: 8px 0 0 -18%;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 22px 0;
+}
+
+/* the source icons are cropped circles: frame them into a full one */
+.feature__icon {
+  flex: none;
+  width: 64px;
+  height: 64px;
+  padding: 4px;
+  border-radius: 50%;
+  background: var(--color-white);
+  object-fit: contain;
+}
+
+.feature__title {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  /* bleeds off both edges like on phones; height is capped so the tape does not get huge */
+  .features__tape {
+    width: 140vw;
+    height: clamp(180px, 16vw, 320px);
+    margin: 8px 0 0 -16vw;
+    object-fit: fill;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .feature {
+    margin: 16px 0;
+  }
+
+  .feature__icon {
+    width: 84px;
+    height: 84px;
+  }
+}

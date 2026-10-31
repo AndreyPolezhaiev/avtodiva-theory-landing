@@ -1,0 +1,75 @@
+.steps__inner {
+  position: relative;
+}
+
+/* below the title, beside the first picture, so it never covers text */
+.steps__head-decor {
+  position: absolute;
+  top: 32px;
+  right: -92px;
+  width: 196px;
+}
+
+.steps__decor {
+  position: absolute;
+  left: -146px;
+  bottom: -50px;
+  width: 340px;
+}
+
+.steps__list {
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.step {
+  position: relative;
+  z-index: 1;
+  max-width: 330px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+/* images differ in width: pin their left edge so the number tiles line up */
+.step__image {
+  width: auto;
+  height: var(--step-image-height);
+  margin: 0 0 18px calc(50% - 98px);
+}
+
+.step__title {
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+  .steps__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 32px;
+    padding-bottom: 40px;
+  }
+
+  .step {
+    margin: 0 auto;
+  }
+
+  .steps__head-decor {
+    top: -47px;
+    right: var(--gutter);
+    width: 150px;
+  }
+
+  .steps__decor {
+    top: -88px;
+    bottom: auto;
+    left: -30px;
+    width: 220px;
+  }
+}
+
+@media (min-width: 992px) {
+  .steps__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

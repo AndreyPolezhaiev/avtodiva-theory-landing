@@ -1,0 +1,71 @@
+:root {
+  /* #region palette */
+  --color-bg: #060c13;
+  --color-white: #fff;
+  --color-ink: #060c13;
+  --color-red: #f4291e;
+  --color-red-light: #ff4a3d;
+  --color-orange: #ffa600;
+  --color-orange-light: #ffb52e;
+  --color-muted: #8192a5;
+  --color-divider: rgba(255, 255, 255, 0.22);
+  /* #endregion */
+  /* #region typography */
+  --font-body: Lato, Arial, sans-serif;
+  --font-display: "Bebas Neue Cyrillic", Impact, sans-serif;
+  --font-button: Montserrat, Arial, sans-serif;
+  --font-size-base: 15px;
+  --line-height-base: 1.45;
+  /* #endregion */
+  /* #region layout */
+  --column-width: 440px;
+  --container-wide-width: 1140px;
+  --container-narrow-width: 820px;
+  --gutter: 16px;
+  --section-padding-y: 56px;
+  --curve-height: 48px;
+  /* #endregion */
+  /* #region transition */
+  --transition-fast: 0.15s ease;
+  /* #endregion */
+  /* #region section */
+  --section-title-font-size: clamp(38px, 11vw, 46px);
+  --section-title-margin-bottom: 32px;
+  /* #endregion */
+  /* #region hero */
+  --hero-title-font-size: clamp(54px, 17.5vw, 74px);
+  --hero-subtitle-font-size: clamp(17px, 5.4vw, 23px);
+  /* #endregion */
+  /* #region btn */
+  --btn-min-height: 76px;
+  --btn-padding: 12px 72px 12px 32px;
+  --btn-padding-mobile: 12px 60px 12px 22px;
+  --btn-font-size: 16px;
+  --btn-icon-size: 38px;
+  --btn-price-font-size: 28px;
+  --btn-price-font-size-mobile: 24px;
+  --btn-military-font-size: 14px;
+  --btn-military-font-size-mobile: 12px;
+  /* #endregion */
+  /* #region cards */
+  --card-radius: 12px;
+  /* #endregion */
+  /* #region step */
+  --step-image-height: 150px;
+  /* #endregion */
+  /* #region reviews */
+  --reviews-radius: 20px;
+  --reviews-arrow-size: 36px;
+  /* #endregion */
+}
+
+@media (min-width: 992px) {
+  :root {
+    --section-padding-y: 88px;
+    --section-title-font-size: 62px;
+    --section-title-margin-bottom: 48px;
+    --curve-height: 80px;
+    --hero-title-font-size: 108px;
+    --hero-subtitle-font-size: 34px;
+  }
+}

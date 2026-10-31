@@ -1,0 +1,84 @@
+.author__photo {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.author__cross {
+  position: absolute;
+  z-index: 1;
+  top: -13%;
+  left: -48%;
+  width: 195%;
+  max-width: none;
+}
+
+.author__portrait {
+  position: relative;
+  z-index: 2;
+  width: 84%;
+  margin: 0 auto;
+}
+
+.author__card {
+  position: relative;
+  z-index: 3;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 22px 20px 56px;
+  border-radius: var(--card-radius);
+  background: var(--color-white);
+  color: var(--color-ink);
+}
+
+.author__signature {
+  position: absolute;
+  right: -37px;
+  bottom: -37px;
+  width: 130px;
+}
+
+.author__name {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+@media (min-width: 992px) {
+  .author__body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .author__photo {
+    max-width: 440px;
+  }
+
+  /* same proportions as on phones */
+  .author__cross {
+    top: -13%;
+    left: -48%;
+    width: 195%;
+  }
+
+  .author__card {
+    max-width: none;
+    padding: 40px 40px 72px;
+    font-size: 16px;
+  }
+
+  .author__name {
+    font-size: 38px;
+    text-align: left;
+  }
+
+  .author__signature {
+    right: -46px;
+    bottom: -46px;
+    width: 160px;
+  }
+}
